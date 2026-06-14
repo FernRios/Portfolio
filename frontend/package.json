@@ -10,12 +10,18 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "nodemailer": "^9.0.0",
     "vue": "^3.4.38"
   },
   "devDependencies": {
+    "@netlify/functions": "^5.3.0",
+    "@types/nodemailer": "^8.0.1",
     "@vitejs/plugin-vue": "^5.1.2",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
     "vue-tsc": "^2.0.29"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
   }
 }
