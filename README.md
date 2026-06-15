@@ -18,28 +18,28 @@ LayerToolsFrontendVue 3, TypeScript, ViteAPI (option A)Netlify FunctionsAPI (opt
 Project structure
 
 .
-├── frontend/                  # Vue 3 + Vite single-page app
-│   ├── src/
-│   │   ├── App.vue            # Layout: hero, project grid, contact section
-│   │   ├── api.ts             # Calls the /api/* endpoints
-│   │   ├── components/
-│   │   │   ├── ProjectCard.vue
-│   │   │   └── ContactForm.vue
-│   │   └── style.css
-│   ├── netlify/functions/     # Serverless ports of the API (Netlify deploy)
-│   │   ├── projects.ts
-│   │   └── contact.ts
-│   ├── netlify.toml           # /api/* → functions + SPA fallback
-│   └── vite.config.ts         # Dev proxy: /api → localhost:3000
-│
-├── backend/                   # Standalone Express API (alternative host)
-│   └── src/
-│       ├── server.ts          # /api/health, /api/projects, /api/contact
-│       ├── routes/
-│       ├── services/github.ts # GitHub profile + repo fetching
-│       └── lib/cache.ts       # In-memory response cache
-│
-└── .env.example
+|-- frontend/                   # Vue 3 + Vite single-page app
+|   |-- src/
+|   |   |-- App.vue             # Layout: hero, project grid, contact section
+|   |   |-- api.ts              # Calls the /api/* endpoints
+|   |   |-- components/
+|   |   |   |-- ProjectCard.vue
+|   |   |   `-- ContactForm.vue
+|   |   `-- style.css
+|   |-- netlify/functions/      # Serverless ports of the API (Netlify deploy)
+|   |   |-- projects.ts
+|   |   `-- contact.ts
+|   |-- netlify.toml            # /api/* -> functions + SPA fallback
+|   `-- vite.config.ts          # Dev proxy: /api -> localhost:3000
+|
+|-- backend/                    # Standalone Express API (alternative host)
+|   `-- src/
+|       |-- server.ts           # /api/health, /api/projects, /api/contact
+|       |-- routes/
+|       |-- services/github.ts  # GitHub profile + repo fetching
+|       `-- lib/cache.ts        # In-memory response cache
+|
+`-- .env.example
 
 Getting started
 
